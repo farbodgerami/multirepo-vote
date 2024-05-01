@@ -18,7 +18,7 @@ vote-build-job:
   stage: build
   image: docker:dind
   script:
-    - cd vote
+    # - cd vote
     - docker build -t ${IMAGE_PATH}/multirepo-vote:$CI_COMMIT_SHORT_SHA .
     - docker push ${IMAGE_PATH}/multirepo-vote:$CI_COMMIT_SHORT_SHA
 
